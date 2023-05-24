@@ -1,0 +1,58 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> 
+{% block title %}{% endblock %}
+
+	</title>
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/> <!--Replace with your tailwind.css once created-->
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <!--Totally optional :) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'fontawesome/css/all.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'fontawesome/css/fontawesome.css' %}">
+	
+</head>
+<body>
+	<div class="bg-gray-800 font-sans leading-normal tracking-normal mt-12">
+
+		<header>
+			<!--Nav-->
+			{% include "Head_Foot/navbar.html" %}
+		</header>
+		
+		<div class="flex md:flex-row-reverse flex-wrap">
+		
+			<!--Main Content-->
+			<div class="w-full md:w-4/5 bg-gray-100">
+			   <div class="container bg-gray-100 pt-16 px-6">
+				  {% block body %}{% endblock  %}
+			   </div>
+			</div>
+			
+			<!--Sidebar-->
+			<div class="w-full md:w-1/5 bg-gray-900 md:bg-gray-900 px-2 text-center fixed bottom-0 md:pt-8 md:top-0 md:left-0 h-16 md:h-screen md:border-r-4 md:border-gray-600">
+			   {% include "Head_Foot/Foot.html" %}
+			</div>
+		</div>
+		
+
+		
+	</div>
+		
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+	
+</body>
+
+</html>

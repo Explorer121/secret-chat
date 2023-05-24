@@ -1,0 +1,42 @@
+<div class="md:mt-12 md:w-48 md:fixed md:left-0 md:top-0 py-4 content-center md:content-start text-left justify-between">
+    <ul class="list-reset flex flex-row md:flex-col pt-3 md:py-3 px-1 md:px-2 text-center md:text-left">
+       <li class="mr-3 flex-1">
+          <a href="/" class="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-grey-500 border-b-2 border-gray-800 md:border-gray-900 hover:border-gray-500">
+          <i class="fas fa-home pr-0 md:pr-3"></i><span class="pb-1 md:pb-0 text-xs md:text-base text-white md:text-gray-400 block md:inline-block">Home</span>
+          </a>
+       </li>
+
+       {% if request.user.is_authenticated %}
+      <li class="mr-3 flex-1">
+         <a href="#" class="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-grey-500 border-b-2 border-gray-800 md:border-gray-900 hover:border-gray-500">
+            <i class="fa fa-bell pr-0 md:pr-3"></i><span class="pb-1 md:pb-0 text-xs md:text-base text-white md:text-gray-400 block md:inline-block">Notification</span>
+
+         </a>
+      </li>
+      <li class="mr-3 flex-1">
+         <a href="#" class="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-grey-500 border-b-2 border-gray-800 md:border-gray-900 hover:border-gray-500">
+            <i class="fa fa-envelope pr-0 md:pr-3"></i><span class="pb-1 md:pb-0 text-xs md:text-base text-white md:text-gray-400 block md:inline-block">Message</span>
+
+         </a>
+      </li>
+      <li class="mr-3 flex-1">
+         <a href="logout" class="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-grey-500 border-b-2 border-gray-800 md:border-gray-900 hover:border-gray-500">
+            <i class="fa fa-sign-out-alt pr-0 md:pr-3"></i><span class="pb-1 md:pb-0 text-xs md:text-base text-white md:text-gray-400 block md:inline-block">Logout</span>
+
+         </a>
+      </li>
+       {% else %}
+
+       <li class="mr-3 flex-1">
+         <a href="{% url 'login' %}" class="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-grey-500 border-b-2 border-gray-800 md:border-gray-900 hover:border-gray-500">
+            <i class="fa fa-sign-in-alt pr-0 md:pr-3"></i><span class="pb-1 md:pb-0 text-xs md:text-base text-white md:text-gray-400 block md:inline-block">Login</span>
+
+         </a>
+      </li>
+
+       {% endif %}
+       
+       
+
+    </ul>
+ </div>

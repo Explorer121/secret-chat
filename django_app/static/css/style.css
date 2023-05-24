@@ -1,0 +1,21 @@
+body {
+    background-color: rgb(229, 229, 229);
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.img_logo {
+    width: 3.7rem;
+    border-radius: 50%;
+    height: 3.7rem;
+}
+
+/* #main {
+    background-color: red;
+} */
